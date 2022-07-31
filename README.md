@@ -36,7 +36,9 @@
     var amtOfBrands = 10;
     var colors = d3.schemeCategory10.slice(0,amtOfBrands);
       
-    var tooltip = d3.select("#tooltip");
+    var div = d3.select("body").append("div")	
+      .attr("class", "tooltip")				
+      .style("opacity", 0);
 
     var pie = d3.pie().value(function(d) {return d.ID});
 
@@ -53,7 +55,20 @@
 
     d3.select("g").selectAll("arc").data(pie(result)).enter().append("path")
                .attr("d", path)
-               .attr("fill", function(d) { return ordScale(d.data.Make); });
+               .attr("fill", function(d) { return ordScale(d.data.Make); })
+               .on("mouseover", function(d) {		
+                  div.transition()		
+                      .duration(200)		
+                      .style("opacity", .9);		
+                  div	.html(d.data.Make + "<br/>"  + d.data.ID)	
+                      .style("left", (d3.event.pageX) + "px")		
+                      .style("top", (d3.event.pageY - 28) + "px");	
+                  })
+                .on("mouseout", function(d) {		
+                  div.transition()		
+                      .duration(500)		
+                      .style("opacity", 0);	
+                  });
       
     var legendItemSize = 8;
     var legendSpacing = 4;
