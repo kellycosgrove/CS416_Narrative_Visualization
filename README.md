@@ -58,11 +58,11 @@
                .style("font-family", "arial")
                .style("font-size", 12);
       
-    var legendItemSize = 12;
+    var legendItemSize = 8;
     var legendSpacing = 4;
-    var xOffset = 150;
-    var yOffset = 100;
-          var legend = d3
+    var xOffset = 50;
+    var yOffset = 50;
+    var legend = d3
      .select('#legend')
      .append('svg')
               .selectAll('.legendItem')
