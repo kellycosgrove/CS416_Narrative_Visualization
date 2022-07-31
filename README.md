@@ -54,7 +54,7 @@
     var legendSpacing = 4;
     var xOffset = 50;
     var yOffset = 50;
-    var legend = d3
+          var legend = d3
      .select('#legend')
      .append('svg')
               .selectAll('.legendItem')
