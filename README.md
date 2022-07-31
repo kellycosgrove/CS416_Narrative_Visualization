@@ -5,9 +5,11 @@
   </head>
   <body onload='init()'>
     <h1>Used Cars for Sale</h1>
-    <svg width=1000 height=1000>
+    <div id="legend">
+      <p>Legend</p>
+    </div>
+    <svg width=800 height=800>
     </svg>
-    <div id="legend"></div>
     <script>
       async function init() {
         const data = await d3.csv('https://raw.githubusercontent.com/kellycosgrove/CS416_Narrative_Visualization/main/used_car_sales_agg.csv');
@@ -52,8 +54,8 @@
       
     var legendItemSize = 8;
     var legendSpacing = 4;
-    var xOffset = 50;
-    var yOffset = 50;
+    var xOffset = 25;
+    var yOffset = 25;
           var legend = d3
      .select('#legend')
      .append('svg')
