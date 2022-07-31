@@ -10,3 +10,7 @@ p {
 path {
   stroke: black;
 }
+
+#legend svg {
+   height: 300px; 
+}
