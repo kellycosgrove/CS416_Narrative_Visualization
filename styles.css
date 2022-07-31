@@ -29,6 +29,10 @@ input {
    font-weight: bold;
    }
 
+#legend>svg {
+  font-size: 12px;
+}
+
 p.desc {
   width: 800px;
   padding: 10px;
