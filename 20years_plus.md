@@ -116,7 +116,7 @@ async function init() {
      .enter()
      .append('text')
      .attr('x', xOffset + legendItemSize + 5)
-     .attr('y', (d, i) => yOffset + (legendItemSize + legendSpacing) * i + 12)
+     .attr('y', (d, i) => yOffset + (legendItemSize + legendSpacing) * i + 8)
      .text(d => d.Make);
 
      }
@@ -194,7 +194,7 @@ async function init() {
        .enter()
        .append('text')
        .attr('x', xOffset + legendItemSize + 5)
-       .attr('y', (d, i) => yOffset + (legendItemSize + legendSpacing) * i + 12)
+       .attr('y', (d, i) => yOffset + (legendItemSize + legendSpacing) * i + 8)
        .text(d => d.Make);
 
 }
