@@ -29,3 +29,15 @@ body>p {
   border: 1px solid #000000;
   background: #CFCFCF;
 }
+
+div.tooltip {	
+    position: absolute;			
+    text-align: center;			
+    width: 100px;					
+    height: 28px;					
+    padding: 2px;				
+    font-size: 10px;
+    background: lightsteelblue;	
+    border: 0px;				
+    pointer-events: none;			
+}
