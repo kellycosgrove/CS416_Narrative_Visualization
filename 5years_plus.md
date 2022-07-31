@@ -32,6 +32,7 @@
     </p>
      </div>
      <div class="nav">
+	     <p>Navigation:</p>
 	<form action="https://kellycosgrove.github.io/CS416_Narrative_Visualization/">
             <input type="submit" value="Back: Home (Overview)" />
         </form>
