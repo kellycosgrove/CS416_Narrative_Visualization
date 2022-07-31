@@ -14,6 +14,7 @@ path {
    background: #FFFFFF;
    opacity: .75;
    top: 300px;
+  float: left;
 }
 
 #legend>p {
