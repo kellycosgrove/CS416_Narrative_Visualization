@@ -28,6 +28,14 @@
         <button id="btn">Filter</button>
     </p>
      </div>
+     <div class="nav">
+	<form action="10years_plus.html">
+            <input type="submit" value="Back: 10 years and older" />
+        </form>
+        <form action="20years_plus.html">
+            <input type="submit" value="Next: 20 years and older" />
+        </form>
+     </div>
     <script>
       const result = [];
 
