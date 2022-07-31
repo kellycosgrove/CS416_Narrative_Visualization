@@ -7,6 +7,7 @@
     <h1>Used Cars for Sale</h1>
     <svg width=1000 height=1000>
     </svg>
+    <div id="tooltip"></div>
     <script>
       async function init() {
         const data = await d3.csv('https://raw.githubusercontent.com/kellycosgrove/CS416_Narrative_Visualization/main/used_car_sales_agg.csv');
@@ -29,6 +30,8 @@
     var radius = 400;
     var amtOfBrands = 10;
     var colors = d3.schemeCategory10.slice(0,amtOfBrands);
+      
+    var tooltip = d3.select("#tooltip");
 
     var pie = d3.pie().value(function(d) {return d.ID});
 
@@ -54,6 +57,12 @@
                .text(function(d) { return d.data.Make; })
                .style("font-family", "arial")
                .style("font-size", 12);
+      
+    d3.selectAll("arc").data(pie(result)).enter().append("rect").on("mouseover", function(d,i) {
+                  tooltip.style("opacity",1)
+                         .style("left", (d3.event.pageX) + "px")
+                         .style("top", (d3.event.pageY) + "px")
+                         .html("item #" +i+ " is " + d);});
       }
     </script>
   </body>
