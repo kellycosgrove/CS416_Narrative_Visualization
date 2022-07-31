@@ -57,3 +57,9 @@ div.nav {
   text-align: center;
   margin: 30px;
 }
+
+.chart-title{
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+}
