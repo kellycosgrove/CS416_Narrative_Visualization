@@ -43,7 +43,7 @@ div.tooltip {
     pointer-events: none;			
 }
 
-.filter{
+.filter {
   float: right;
   width: 200px;
   border: 1px solid #000000;
@@ -53,7 +53,7 @@ div.tooltip {
   margin: 20px;
 }
 
-.nav{
+div.nav {
   text-align: center;
   margin: 30px;
 }
