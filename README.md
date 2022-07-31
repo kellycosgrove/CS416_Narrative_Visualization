@@ -9,7 +9,6 @@
       Ever wonder which cars stay on the road the longest? This visualization shows the breakdown of used cars sold between the years 2019-2020. Click through to see how the breakdown changes as we filter on age of the car.
     </p>
     <div id="legend">
-      <p>Legend</p>
     </div>
     <svg id="chart" width=500 height=500>
     </svg>
