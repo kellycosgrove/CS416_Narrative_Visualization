@@ -5,7 +5,7 @@
   </head>
   <body onload='init()'>
     <h1>Used Cars for Sale</h1>
-    <svg width=500 height=500>
+    <svg width=1000 height=1000>
     </svg>
     <script>
       async function init() {
@@ -26,7 +26,7 @@
     console.log(result)
 
     var margin = 200;
-    var radius = 500;
+    var radius = 400;
     var amtOfBrands = 10;
     var colors = d3.schemeCategory10.slice(0,amtOfBrands);
 
