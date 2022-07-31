@@ -7,7 +7,7 @@
     <h1>Used Cars for Sale</h1>
     <svg width=1000 height=1000>
     </svg>
-    <div id="tooltip"></div>
+    <div id="legend"></div>
     <script>
       async function init() {
         const data = await d3.csv('https://raw.githubusercontent.com/kellycosgrove/CS416_Narrative_Visualization/main/used_car_sales_agg.csv');
@@ -58,11 +58,37 @@
                .style("font-family", "arial")
                .style("font-size", 12);
       
-    d3.selectAll("arc").data(pie(result)).enter().append("rect").on("mouseover", function(d,i) {
-                  tooltip.style("opacity",1)
-                         .style("left", (d3.event.pageX) + "px")
-                         .style("top", (d3.event.pageY) + "px")
-                         .html("item #" +i+ " is " + d);});
+    var legendItemSize = 12;
+    var legendSpacing = 4;
+    var xOffset = 150;
+    var yOffset = 100;
+          var legend = d3
+     .select('#legend')
+     .append('svg')
+              .selectAll('.legendItem')
+              .data(result);
+
+     legend
+     .enter()
+     .append('rect')
+     .attr('class', 'legendItem')
+     .attr('width', legendItemSize)
+     .attr('height', legendItemSize)
+     .style('fill', function(d) { return ordScale(d.Make); })
+     .attr('transform',
+                  (d, i) => {
+                      var x = xOffset;
+                      var y = yOffset + (legendItemSize + legendSpacing) * i;
+                      return `translate(${x}, ${y})`;
+                  });  
+
+   legend
+     .enter()
+     .append('text')
+     .attr('x', xOffset + legendItemSize + 5)
+     .attr('y', (d, i) => yOffset + (legendItemSize + legendSpacing) * i + 12)
+     .text(d => d.Make);  
+      
       }
     </script>
   </body>
