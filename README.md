@@ -49,14 +49,6 @@
     d3.select("g").selectAll("arc").data(pie(result)).enter().append("path")
                .attr("d", path)
                .attr("fill", function(d) { return ordScale(d.data.Make); });
-
-    d3.select("g").selectAll("arc").data(pie(result)).enter().append("text")
-               .attr("transform", function(d) { 
-                        return "translate(" + label.centroid(d) + ")"; 
-                })
-               .text(function(d) { return d.data.Make; })
-               .style("font-family", "arial")
-               .style("font-size", 12);
       
     var legendItemSize = 8;
     var legendSpacing = 4;
