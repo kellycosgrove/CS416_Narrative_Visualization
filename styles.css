@@ -7,6 +7,11 @@ h1 {
 path {
   stroke: black;
 }
+
+input {
+  margin: 5px;
+}
+
 #legend {
    height: 200px;
    width: 200px;
@@ -25,7 +30,7 @@ path {
    }
 
 p.desc {
-  width: 400px;
+  width: 800px;
   padding: 10px;
   border: 1px solid #000000;
   background: #CFCFCF;
@@ -35,10 +40,10 @@ div.tooltip {
     position: absolute;			
     text-align: center;			
     width: 100px;					
-    height: 28px;					
+    height: 34px;					
     padding: 2px;				
     font-size: 10px;
-    background: lightsteelblue;	
+    background: #CFCFCF;	
     border: 0px;				
     pointer-events: none;			
 }
