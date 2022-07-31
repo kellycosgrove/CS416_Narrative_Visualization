@@ -42,3 +42,7 @@ div.tooltip {
     border: 0px;				
     pointer-events: none;			
 }
+
+.dropdown{
+  float: right;
+}
