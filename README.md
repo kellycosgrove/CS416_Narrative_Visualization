@@ -13,6 +13,13 @@
     </div>
     <svg width=500 height=500>
     </svg>
+    <div class="dropdown">
+      <select onchange="changeLanguage(this.value)">
+          <option value="Age filter" selected="selected">Choose</option>
+          <option value="-1" >Any</option>
+          <option value="5" >5 years and older</option>
+          <option value="10" >10 years and older</option>
+     </div>
     <script>
       async function init() {
         const data = await d3.csv('https://raw.githubusercontent.com/kellycosgrove/CS416_Narrative_Visualization/main/used_car_sales_agg.csv');
