@@ -28,6 +28,14 @@
         <button id="btn">Filter</button>
     </p>
      </div>
+     <div class="nav">
+	<form action="https://kellycosgrove.github.io/CS416_Narrative_Visualization/">
+            <input type="submit" value="Back: Home (Overview)" />
+        </form>
+        <form action="10years_plus.html">
+            <input type="submit" value="Next: 10 years and older" />
+        </form>
+     </div>
     <script>
       const result = [];
 
