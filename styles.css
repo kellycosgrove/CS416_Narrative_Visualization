@@ -7,14 +7,23 @@ h1 {
 path {
   stroke: black;
 }
-#legend svg {
+#legend {
    height: 200px;
-   width: 200px;
+   width: 150px;
    border: 1px solid #000000;
    background: #FFFFFF;
    opacity: .75;
+   top: 300px;
 }
-p {
+
+#legend>p {
+   padding: 5px;
+   text-align: center;
+   margin: 0px;
+   font-weight: bold;
+   }
+
+body>p {
   width: 400px;
   padding: 10px;
   border: 1px solid #000000;
