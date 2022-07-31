@@ -31,6 +31,15 @@
         <button id="btn">Filter</button>
     </p>
      </div>
+     <div class="nav">
+	     <p>Navigation:</p>
+	<form action="15years_plus.html">
+            <input type="submit" value="Back: 15 years and older" />
+        </form>
+        <form action="25years_plus.html">
+            <input type="submit" value="Next: 25 years and older" />
+        </form>
+     </div>
     <script>
       const result = [];
 
