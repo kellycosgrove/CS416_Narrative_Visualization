@@ -24,16 +24,19 @@
     console.log(result)
 
     var margin = 200;
+    var radius = 500;
+    var amtOfBrands = 10;
+    var colors = d3.schemeCategory10.slice(0,amtOfBrands);
 
     var pie = d3.pie().value(function(d) {return d.ID});
 
-    var path = d3.arc().innerRadius(0).outerRadius(200);
+    var path = d3.arc().innerRadius(0).outerRadius(radius);
     var ordScale = d3.scaleOrdinal()
                    .domain(result)
-    .range(['#ffd384','#94ebcd','#fbaccc','#d3e0ea','#fa7f72','#ffd384','#94ebcd','#fbaccc','#d3e0ea','#fa7f72']);
+    .range(colors);
 
     var label = d3.arc()
-                .outerRadius(200)
+                .outerRadius(radius)
                 .innerRadius(0);
 
     d3.select("svg").append("g").attr("transform", "translate("+margin+","+margin+")");
@@ -48,7 +51,7 @@
                 })
                .text(function(d) { return d.data.Make; })
                .style("font-family", "arial")
-               .style("font-size", 15);
+               .style("font-size", 12);
       }
     </script>
   </body>
