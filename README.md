@@ -1,6 +1,8 @@
 <html>
   <script src='https://d3js.org/d3.v5.min.js'></script>
-  <style> rect {fill: lightblue; stroke: black; }</style>
+  <head>
+    <link rel="stylesheet" href="https://raw.githubusercontent.com/kellycosgrove/CS416_Narrative_Visualization/main/styles.css">
+  </head>
   <body onload='init()'>
     <h1>Used Cars for Sale</h1>
     <svg width=500 height=500>
