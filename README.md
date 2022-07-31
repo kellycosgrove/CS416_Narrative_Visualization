@@ -11,7 +11,7 @@
     <div id="legend">
       <p>Legend</p>
     </div>
-    <svg width=800 height=800>
+    <svg width=500 height=500>
     </svg>
     <script>
       async function init() {
@@ -31,8 +31,8 @@
     console.log(filteredData)
     console.log(result)
 
-    var margin = 400;
-    var radius = 400;
+    var margin = 250;
+    var radius = 250;
     var amtOfBrands = 10;
     var colors = d3.schemeCategory10.slice(0,amtOfBrands);
       
