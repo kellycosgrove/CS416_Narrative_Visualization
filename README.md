@@ -82,16 +82,19 @@ async function init() {
                       .style("opacity", 0);	
                   });
       
+    d3.select('#legend').append('p').text('Legend');
+      
     var legendItemSize = 8;
     var legendSpacing = 4;
     var xOffset = 25;
     var yOffset = 25;
-          var legend = d3
+    
+      var legend = d3
      .select('#legend')
      .append('svg')
               .selectAll('.legendItem')
               .data(result);
-              
+                  
 
      legend
        .enter()
@@ -156,11 +159,15 @@ async function init() {
                         .style("opacity", 0);	
                     });
       
+      d3.select('#legend').append('p').text('Legend');
+      
       var legendItemSize = 8;
       var legendSpacing = 4;
       var xOffset = 25;
       var yOffset = 25;
-            var legend = d3
+      
+      
+       var legend = d3
        .select('#legend')
        .append('svg')
                 .selectAll('.legendItem')
@@ -199,7 +206,7 @@ async function init() {
      });
      changeBrand(values);
        
-   });    
+   });   
    
     </script>
   </body>
