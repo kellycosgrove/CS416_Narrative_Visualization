@@ -32,6 +32,7 @@
     </p>
      </div>
      <div class="nav">
+	     <p>Navigation:</p>
 	<form action="10years_plus.html">
             <input type="submit" value="Back: 10 years and older" />
         </form>
