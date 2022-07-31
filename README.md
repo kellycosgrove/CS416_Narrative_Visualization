@@ -91,15 +91,16 @@ async function init() {
      .append('svg')
               .selectAll('.legendItem')
               .data(result);
+              
 
      legend
-     .enter()
-     .append('rect')
-     .attr('class', 'legendItem')
-     .attr('width', legendItemSize)
-     .attr('height', legendItemSize)
-     .style('fill', function(d) { return ordScale(d.Make); })
-     .attr('transform',
+       .enter()
+       .append('rect')
+       .attr('class', 'legendItem')
+       .attr('width', legendItemSize)
+       .attr('height', legendItemSize)
+       .style('fill', function(d) { return ordScale(d.Make); })
+       .attr('transform',
                   (d, i) => {
                       var x = xOffset;
                       var y = yOffset + (legendItemSize + legendSpacing) * i;
@@ -111,7 +112,8 @@ async function init() {
      .append('text')
      .attr('x', xOffset + legendItemSize + 5)
      .attr('y', (d, i) => yOffset + (legendItemSize + legendSpacing) * i + 12)
-     .text(d => d.Make);  
+     .text(d => d.Make);
+
      }
      
  function changeBrand(values){
@@ -126,6 +128,7 @@ async function init() {
     .range(colors);
     
     document.getElementById('chart').innerHTML = "";
+    document.getElementById('legend').innerHTML = "";
     
     d3.select("#chart").append("g").attr("transform", "translate("+margin+","+margin+")");
     
@@ -152,6 +155,39 @@ async function init() {
                         .duration(500)		
                         .style("opacity", 0);	
                     });
+      
+      var legendItemSize = 8;
+      var legendSpacing = 4;
+      var xOffset = 25;
+      var yOffset = 25;
+            var legend = d3
+       .select('#legend')
+       .append('svg')
+                .selectAll('.legendItem')
+                .data(makeFilteredData);
+
+
+       legend
+         .enter()
+         .append('rect')
+         .attr('class', 'legendItem')
+         .attr('width', legendItemSize)
+         .attr('height', legendItemSize)
+         .style('fill', function(d) { return ordScale(d.Make); })
+         .attr('transform',
+                    (d, i) => {
+                        var x = xOffset;
+                        var y = yOffset + (legendItemSize + legendSpacing) * i;
+                        return `translate(${x}, ${y})`;
+                    });  
+
+     legend
+       .enter()
+       .append('text')
+       .attr('x', xOffset + legendItemSize + 5)
+       .attr('y', (d, i) => yOffset + (legendItemSize + legendSpacing) * i + 12)
+       .text(d => d.Make);
+
 }
      
    const btn = document.querySelector('#btn');
@@ -162,7 +198,9 @@ async function init() {
        values.push(checkbox.value);
      });
      changeBrand(values);
+       
    });    
+   
     </script>
   </body>
 </html>
