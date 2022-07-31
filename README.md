@@ -6,7 +6,7 @@
     <svg width=300 height=300>
     </svg>
     <script>
-      const data = await d3.csv('https://raw.githubusercontent.com/kellycosgrove/CS416_Narrative_Visualization/main/used_car_sales_agg.csv');
+      const data = d3.csv('https://raw.githubusercontent.com/kellycosgrove/CS416_Narrative_Visualization/main/used_car_sales_agg.csv');
 
       var filteredData = data.filter(function(d){ return d.agesold > 4 })
 
