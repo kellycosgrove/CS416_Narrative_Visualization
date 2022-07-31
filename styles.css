@@ -43,6 +43,12 @@ div.tooltip {
     pointer-events: none;			
 }
 
-.dropdown{
+.filter{
   float: right;
+  width: 200px;
+  border: 1px solid #000000;
+  background: #FFFFFF;
+  opacity: .75;
+  padding: 10px;
+  margin: 20px;
 }
