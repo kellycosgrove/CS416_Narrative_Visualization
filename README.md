@@ -1,7 +1,7 @@
 <html>
   <script src='https://d3js.org/d3.v5.min.js'></script>
   <head>
-    <link rel="stylesheet" href="https://raw.githubusercontent.com/kellycosgrove/CS416_Narrative_Visualization/main/styles.css">
+    <link rel="stylesheet" href="styles.css">
   </head>
   <body onload='init()'>
     <h1>Used Cars for Sale</h1>
@@ -25,7 +25,7 @@
     console.log(filteredData)
     console.log(result)
 
-    var margin = 200;
+    var margin = 400;
     var radius = 400;
     var amtOfBrands = 10;
     var colors = d3.schemeCategory10.slice(0,amtOfBrands);
