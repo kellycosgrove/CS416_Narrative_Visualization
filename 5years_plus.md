@@ -18,7 +18,7 @@
     <div class="filter">
       <p>Select Car Makers to Filter On:</p>
     <label for="c1"> <input type="checkbox" name="make" value="BMW" id="c1">BMW</label><br>
-    <label for="c2"><input type="checkbox" name="make" value="Cadillac" id="c2"> Cadillac</label><br>
+    <label for="c2"><input type="checkbox" name="make" value="Cadillac" id="c2">Cadillac</label><br>
     <label for="c3"><input type="checkbox" name="make" value="Chevrolet" id="c3">Chevrolet</label><br>
     <label for="c3"><input type="checkbox" name="make" value="Dodge" id="c3">Dodge</label><br>
     <label for="c3"><input type="checkbox" name="make" value="Ford" id="c3">Ford</label><br>
