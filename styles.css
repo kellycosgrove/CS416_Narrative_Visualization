@@ -12,6 +12,11 @@ input {
   margin: 5px;
 }
 
+form {
+  width:225px;
+  display:inline;
+}
+
 #legend {
    height: 200px;
    width: 200px;
