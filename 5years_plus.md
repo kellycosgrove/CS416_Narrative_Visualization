@@ -1,4 +1,35 @@
-const result = [];
+<html>
+  <script src='https://d3js.org/d3.v5.min.js'></script>
+  <head>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body onload='init()'>
+    <h1>Used Cars for Sale</h1>
+    <p>
+      Ever wonder which cars stay on the road the longest? This visualization shows the breakdown of used cars sold between the years 2019-2020. Click through to see how the breakdown changes as we filter on age of the car.
+    </p>
+    <div id="legend">
+    </div>
+    <svg id="chart" width=500 height=500>
+    </svg>
+    <div class="filter">
+      <p>Select Car Makers to Filter On:</p>
+    <label for="c1"> <input type="checkbox" name="make" value="BMW" id="c1">BMW</label><br>
+    <label for="c2"><input type="checkbox" name="make" value="Cadillac" id="c2"> Cadillac</label><br>
+    <label for="c3"><input type="checkbox" name="make" value="Chevrolet" id="c3">Chevrolet</label><br>
+    <label for="c3"><input type="checkbox" name="make" value="Dodge" id="c3">Dodge</label><br>
+    <label for="c3"><input type="checkbox" name="make" value="Ford" id="c3">Ford</label><br>
+    <label for="c3"><input type="checkbox" name="make" value="Honda" id="c3">Honda</label><br>
+    <label for="c3"><input type="checkbox" name="make" value="Jeep" id="c3">Jeep</label><br>
+    <label for="c3"><input type="checkbox" name="make" value="Mercedes-Benz" id="c3">Mercedes-Benze</label><br>
+    <label for="c3"><input type="checkbox" name="make" value="Toyota" id="c3">Toyota</label><br>
+    <label for="c3"><input type="checkbox" name="make" value="Volkswagen" id="c3">Volkswagen</label><br>
+    <p>
+        <button id="btn">Filter</button>
+    </p>
+     </div>
+    <script>
+      const result = [];
 
 async function init() {
     data = await d3.csv('https://raw.githubusercontent.com/kellycosgrove/CS416_Narrative_Visualization/main/used_car_sales_agg.csv');
@@ -174,4 +205,9 @@ async function init() {
      });
      changeBrand(values);
        
-   });    
+   });   
+   
+    </script>
+  </body>
+</html>
+  
