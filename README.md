@@ -2,27 +2,53 @@
   <script src='https://d3js.org/d3.v5.min.js'></script>
   <style> rect {fill: lightblue; stroke: black; }</style>
   <body onload='init()'>
-    <h1>Title of the Visual Narrative</h1>
-    <svg width=300 height=300>
+    <h1>Used Cars for Sale</h1>
+    <svg width=500 height=500>
     </svg>
     <script>
       async function init() {
         const data = await d3.csv('https://raw.githubusercontent.com/kellycosgrove/CS416_Narrative_Visualization/main/used_car_sales_agg.csv');
+    var filteredData = data.filter(function(d){ return d.agesold > 4 })
 
-        var filteredData = data.filter(function(d){ return d.agesold > 4 })
+    var result = [];
+    filteredData.reduce(function(res, value) {
+      if (!res[value.Make]) {
+        res[value.Make] = { Make: value.Make, ID: 0*1 };
+        result.push(res[value.Make])
+      }
+      res[value.Make].ID += value.ID*1;
+      return res;
+    }, {});
 
-        var result = [];
-        filteredData.reduce(function(res, value) {
-          if (!res[value.Make]) {
-            res[value.Make] = { Make: value.Make, ID: 0*1 };
-            result.push(res[value.Make])
-          }
-          res[value.Make].ID += value.ID*1;
-          return res;
-        }, {});
+    console.log(filteredData)
+    console.log(result)
 
-        console.log(filteredData)
-        console.log(result)
+    var margin = 200;
+
+    var pie = d3.pie().value(function(d) {return d.ID});
+
+    var path = d3.arc().innerRadius(0).outerRadius(200);
+    var ordScale = d3.scaleOrdinal()
+                   .domain(result)
+    .range(['#ffd384','#94ebcd','#fbaccc','#d3e0ea','#fa7f72','#ffd384','#94ebcd','#fbaccc','#d3e0ea','#fa7f72']);
+
+    var label = d3.arc()
+                .outerRadius(200)
+                .innerRadius(0);
+
+    d3.select("svg").append("g").attr("transform", "translate("+margin+","+margin+")");
+
+    d3.select("g").selectAll("arc").data(pie(result)).enter().append("path")
+               .attr("d", path)
+               .attr("fill", function(d) { return ordScale(d.data.Make); });
+
+    d3.select("g").selectAll("arc").data(pie(result)).enter().append("text")
+               .attr("transform", function(d) { 
+                        return "translate(" + label.centroid(d) + ")"; 
+                })
+               .text(function(d) { return d.data.Make; })
+               .style("font-family", "arial")
+               .style("font-size", 15);
       }
     </script>
   </body>
