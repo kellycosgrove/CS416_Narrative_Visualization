@@ -4,7 +4,7 @@
     <link rel="stylesheet" href="styles.css">
   </head>
   <body onload='init()'>
-    <h1>Used Cars for Sale</h1>
+    <h1>Used Car Sales by Car Age</h1>
     <p class="desc">
       Ever wonder which cars stay on the road the longest? This visualization shows the breakdown of used cars sold between the years 2019-2020, by make. Click through the navigation buttons to see how the breakdown changes as we filter on age of the car.
     </p>
