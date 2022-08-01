@@ -9,7 +9,7 @@
       Ever wonder which cars stay on the road the longest? This visualization shows the breakdown of used cars sold between the years 2019-2020, by make. Click through the navigation buttons to see how the breakdown changes as we filter on age of the car.
     </p>
     <p class="chart-title">
-    	Cars Sold by Make: 25 Years and Older
+    	Cars Sold by Make: 25-30 Years Old
     </p>
     <div id="legend">
     </div>
@@ -34,7 +34,7 @@
      <div class="nav">
 	     <p>Navigation:</p>
 	<form action="20years_plus.html">
-            <input type="submit" value="Back: 20 years and older" />
+            <input type="submit" value="Back: 20-25 Years Old" />
         </form>
      </div>
     <script>
