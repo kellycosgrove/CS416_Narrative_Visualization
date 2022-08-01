@@ -42,8 +42,9 @@
 
 async function init() {
     data = await d3.csv('https://raw.githubusercontent.com/kellycosgrove/CS416_Narrative_Visualization/main/used_car_sales_agg.csv');
-    var minAge = 24
-    var filteredData = data.filter(function(d){ return d.agesold > minAge })
+    var minAge = 25;
+    var maxAge = 30;
+    var filteredData = data.filter(function(d){ return d.agesold >= minAge && d.agesold <= maxAge });
 
     filteredData.reduce(function(res, value) {
       if (!res[value.Make]) {
